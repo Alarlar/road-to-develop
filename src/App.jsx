@@ -27,12 +27,27 @@ function App() {
     <div className="App">
       <h1>My Hacker Stories</h1>
 
-      <label htmlFor='search'>Search: </label>
-      <input id='search' type='text' />
+      <Search />
 
       <hr /> 
+     
+      <List /> {/* New component inside App component */}
+      </div>
+  );
+}
 
-      <ul>
+function Search() {
+  return (
+    <div>
+      <label htmlFor="search">Search: </label>
+      <input id='search' type='text' />
+    </div>
+  )
+}
+
+function List() {
+  return (
+    <ul>
           {list.map(function (item) {
             return ( 
             <li key={item.objectID}>
@@ -43,8 +58,9 @@ function App() {
             );
           })}
       </ul>
-    </div>
   );
 }
+
+    
 
 export default App; 
