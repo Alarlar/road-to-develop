@@ -45,9 +45,8 @@ function Search() {
   );
 }
 
-function List() {
-  return (
-    <div>
+      <hr /> 
+
       <ul>
           {list.map(function (item) {
             return ( 
@@ -59,10 +58,10 @@ function List() {
             );
           })}
       </ul>
-
     </div>
-
   );
 }
 
-export default App;
+    
+
+export default App; 
