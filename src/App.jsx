@@ -2,7 +2,6 @@
 
 import './App.css';
 
-
 const list = [
   {
   title: 'React',
@@ -27,11 +26,28 @@ function App() {
     <div className="App">
       <h1>My Hacker Stories</h1>
 
+      <Search /> {/* Инстонация - Instantiate - создать экземпляр из компонента */}
+
+      <List />
+
+      <hr />
+
+      </div>
+  );
+}
+
+function Search() {
+  return (
+    <div>
       <label htmlFor='search'>Search: </label>
       <input id='search' type='text' />
+    </div>
+  );
+}
 
-      <hr /> 
-
+function List() {
+  return (
+    <div>
       <ul>
           {list.map(function (item) {
             return ( 
@@ -43,7 +59,9 @@ function App() {
             );
           })}
       </ul>
+
     </div>
+
   );
 }
 
